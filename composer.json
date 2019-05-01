@@ -1,0 +1,30 @@
+{
+    "name": "rochev/codesniffer-standard",
+    "type": "library",
+    "description": "CodeSniffer Standard",
+    "keywords": [
+        "php",
+        "codesniffer",
+        "phpcs",
+        "code quality"
+    ],
+    "authors": [
+        {
+            "name": "Vladimir Rochev",
+            "email": "vladimir@rochev.me"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "squizlabs/php_codesniffer": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rochev\\CodeSniffer\\": "src/"
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs --colors --cache=.phpcs.cache -p -s --standard=./ruleset.xml src/",
+        "phpcbf": "phpcbf --colors --cache=.phpcs.cache -p -s --standard=./ruleset.xml src/"
+    }
+}
